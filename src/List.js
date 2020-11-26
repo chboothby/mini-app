@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const List = (props) => {
   return (
     <ul>
-      {props.dogs.map((dog) => {
+      {props.dogs.map((dog, index) => {
         return (
-          <div class="dog-profile">
-            <li key={dog.id}>
+          <div key={index} className="dog-profile">
+            <li>
               <p>Name: {dog.name}</p>
               <p>Age: {dog.age}</p>
               <p>Mileage: {dog.mileage}</p>
