@@ -1,29 +1,29 @@
-import React from "react";
+import React from 'react';
 
 class DogAdder extends React.Component {
   state = {
-    name: "",
-    age: "",
-    mileage: "",
-    picture: "",
-    id: this.props.dogs.length,
+    name: '',
+    age: '',
+    mileage: '',
+    picture: '',
+    id: this.props.count
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addDog(this.state);
     this.setState({
-      name: "",
-      age: "",
-      mileage: "",
-      picture: "",
-      id: this.props.dogs.length,
+      name: '',
+      age: '',
+      mileage: '',
+      picture: '',
+      id: this.props.count + 1
     });
   };
 
   handleChange = (event) => {
     this.setState({
-      [event.target.id]: event.target.value,
+      [event.target.id]: event.target.value
     });
   };
 
